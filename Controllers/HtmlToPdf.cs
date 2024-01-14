@@ -4,6 +4,9 @@ using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
 using HiQPdf;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Windows.Documents.Flow.FormatProviders.Html;
+using Telerik.Windows.Documents.Flow.Model;
 
 namespace HtmlToPdf.Controllers
 {
@@ -30,7 +33,7 @@ namespace HtmlToPdf.Controllers
         {
             var appPath = _env.ContentRootPath;
             var htmlPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir.html");
-            var pdfPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir3.pdf");
+            var pdfPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir4.pdf");
 
             var html = System.IO.File.ReadAllText(htmlPath);
 
@@ -46,10 +49,20 @@ namespace HtmlToPdf.Controllers
             //document.Close(true);
 
 
-            var converter = new HiQPdf.HtmlToPdf();
-            var basePath = "";
-            converter.ConvertHtmlToFile(html, basePath, pdfPath);
-            
+            //var converter = new HiQPdf.HtmlToPdf();
+            //var basePath = "";
+            //converter.ConvertHtmlToFile(html, basePath, pdfPath);
+
+           
+            var htmlProvider = new HtmlFormatProvider();
+            RadFlowDocument document = htmlProvider.Import(html);
+            var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
+            using (Stream output = System.IO.File.OpenWrite(pdfPath))
+            {
+                pdfProvider.Export(document, output);
+            }
+
+
             return true;
         }
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\HtmlToPdf.csproj": {}
+    "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\HtmlToPdf.csproj": {
+    "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\HtmlToPdf.csproj",
+        "projectUniqueName": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
         "projectName": "HtmlToPdf",
-        "projectPath": "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\HtmlToPdf.csproj",
+        "projectPath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
         "packagesPath": "C:\\Users\\arxan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\obj\\",
+        "outputPath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -27,7 +27,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -60,6 +61,18 @@
             "Syncfusion.HtmlToPdfConverter.Net.Windows": {
               "target": "Package",
               "version": "[24.1.45, )"
+            },
+            "Telerik.Documents.Core.Trial": {
+              "target": "Package",
+              "version": "[2022.2.613, )"
+            },
+            "Telerik.Documents.Flow.FormatProviders.Pdf.Trial": {
+              "target": "Package",
+              "version": "[2022.2.613, )"
+            },
+            "Telerik.Documents.Flow.Trial": {
+              "target": "Package",
+              "version": "[2022.2.613, )"
             }
           },
           "imports": [
@@ -81,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

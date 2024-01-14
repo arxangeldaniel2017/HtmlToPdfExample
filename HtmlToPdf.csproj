@@ -8,14 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AppData\HtmlToPdf\**" />
+    <Content Remove="AppData\HtmlToPdf\**" />
+    <EmbeddedResource Remove="AppData\HtmlToPdf\**" />
+    <None Remove="AppData\HtmlToPdf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="HiQPdf.NetCore" Version="15.0.8" />
     <PackageReference Include="HtmlRendererCore.PdfSharp" Version="1.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Syncfusion.HtmlToPdfConverter.Net.Windows" Version="24.1.45" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="AppData\HtmlToPdf\" />
+    <PackageReference Include="Telerik.Documents.Core.Trial" Version="2022.2.613" />
+    <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf.Trial" Version="2022.2.613" />
+    <PackageReference Include="Telerik.Documents.Flow.Trial" Version="2022.2.613" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ThtP7aYetqmxYXEKbHHKeK4TTy2rAkWCMXQEq42vpsZWT91rcr0hMIPvr0XpRld+hnnzgpLfHSgA2GeS9Y/lQQ==",
+  "dgSpecHash": "ft3yAw/y7SaSwQrBzvIhVH7jI3/M3Lv84GBVpcqVUZGHmD+f/e+Z4c41sOeX3nBY//b0b/l4lqEwtMAHab28LQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arxan\\OneDrive\\Documents\\INTO_IT_PROJECTS\\EXAMPLES\\HtmlToPdfExample\\HtmlToPdf.csproj",
+  "projectFilePath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arxan\\.nuget\\packages\\hiqpdf.netcore\\15.0.8\\hiqpdf.netcore.15.0.8.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\htmlrenderercore.pdfsharp\\1.0.5\\htmlrenderercore.pdfsharp.1.0.5.nupkg.sha512",
@@ -23,10 +23,17 @@
     "C:\\Users\\arxan\\.nuget\\packages\\syncfusion.licensing\\24.1.45\\syncfusion.licensing.24.1.45.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\syncfusion.pdf.net.core\\24.1.45\\syncfusion.pdf.net.core.24.1.45.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\system.formats.asn1\\6.0.0\\system.formats.asn1.6.0.0.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\system.security.cryptography.pkcs\\6.0.0\\system.security.cryptography.pkcs.6.0.0.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
-    "C:\\Users\\arxan\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512"
+    "C:\\Users\\arxan\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\telerik.documents.core.trial\\2022.2.613\\telerik.documents.core.trial.2022.2.613.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\telerik.documents.fixed.trial\\2022.2.613\\telerik.documents.fixed.trial.2022.2.613.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\telerik.documents.flow.formatproviders.pdf.trial\\2022.2.613\\telerik.documents.flow.formatproviders.pdf.trial.2022.2.613.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\telerik.documents.flow.trial\\2022.2.613\\telerik.documents.flow.trial.2022.2.613.nupkg.sha512",
+    "C:\\Users\\arxan\\.nuget\\packages\\telerik.zip.trial\\2022.2.613\\telerik.zip.trial.2022.2.613.nupkg.sha512"
   ],
   "logs": []
 }
