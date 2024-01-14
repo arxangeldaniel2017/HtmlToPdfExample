@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj": {}
+    "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\HtmlToPdf.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj": {
+    "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\HtmlToPdf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
+        "projectUniqueName": "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\HtmlToPdf.csproj",
         "projectName": "HtmlToPdf",
-        "projectPath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
+        "projectPath": "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\HtmlToPdf.csproj",
         "packagesPath": "C:\\Users\\arxan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\obj\\",
+        "outputPath": "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

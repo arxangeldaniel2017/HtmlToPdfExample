@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ft3yAw/y7SaSwQrBzvIhVH7jI3/M3Lv84GBVpcqVUZGHmD+f/e+Z4c41sOeX3nBY//b0b/l4lqEwtMAHab28LQ==",
+  "dgSpecHash": "HAbO4J/uve61Kt6/TFMnxojP9g+QEbTiAzWrYWrs+3gcMT0r+SgOv+IOrqntsxihr+4gGmPzT6VvH2VAAGPWug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\arxan\\Source\\Repos\\HtmlToPdfExample\\HtmlToPdf.csproj",
+  "projectFilePath": "C:\\MY_PROJECTS\\EXAMPLES\\HtmlToPdfExample1\\HtmlToPdf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arxan\\.nuget\\packages\\hiqpdf.netcore\\15.0.8\\hiqpdf.netcore.15.0.8.nupkg.sha512",
     "C:\\Users\\arxan\\.nuget\\packages\\htmlrenderercore.pdfsharp\\1.0.5\\htmlrenderercore.pdfsharp.1.0.5.nupkg.sha512",

@@ -32,8 +32,8 @@ namespace HtmlToPdf.Controllers
         public bool Get()
         {
             var appPath = _env.ContentRootPath;
-            var htmlPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir.html");
-            var pdfPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir4.pdf");
+            var htmlPath = Path.Combine(appPath, "AppData\\SalmaAlamNaylor.html");
+            var pdfPath = Path.Combine(appPath, "AppData\\SalmaAlamNaylor.pdf");
 
             var html = System.IO.File.ReadAllText(htmlPath);
 
@@ -42,25 +42,25 @@ namespace HtmlToPdf.Controllers
             //pdf.Save(pdfPath);
 
             // Syncfusion - good but expensive
-            //HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-            //PdfDocument document = htmlConverter.Convert(htmlPath);
-            //FileStream fileStream = new FileStream(pdfPath, FileMode.CreateNew, FileAccess.ReadWrite);
-            //document.Save(fileStream);
-            //document.Close(true);
+            HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
+            var document = htmlConverter.Convert(htmlPath);
+            FileStream fileStream = new FileStream(pdfPath, FileMode.CreateNew, FileAccess.ReadWrite);
+            document.Save(fileStream);
+            document.Close(true);
 
 
             //var converter = new HiQPdf.HtmlToPdf();
             //var basePath = "";
             //converter.ConvertHtmlToFile(html, basePath, pdfPath);
 
-           
-            var htmlProvider = new HtmlFormatProvider();
-            RadFlowDocument document = htmlProvider.Import(html);
-            var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-            using (Stream output = System.IO.File.OpenWrite(pdfPath))
-            {
-                pdfProvider.Export(document, output);
-            }
+
+            //var htmlProvider = new HtmlFormatProvider();
+            //RadFlowDocument document = htmlProvider.Import(html);
+            //var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
+            //using (Stream output = System.IO.File.OpenWrite(pdfPath))
+            //{
+            //    pdfProvider.Export(document, output);
+            //}
 
 
             return true;
