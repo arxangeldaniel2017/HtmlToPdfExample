@@ -1,0 +1,72 @@
+
+    (function() {
+      var baseURL = "https://cdn.shopify.com/shopifycloud/checkout-web/assets/";
+      var scripts = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.cdb91c7a2a2214cb0516.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/431.latest.en.7425d35eef441dd4f5ab.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/605.latest.en.314e89a8131329087f6a.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/598.latest.en.fe9c14be777555bb281a.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.35fc991026029d44f266.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/731.latest.en.13d4de92b88330e8fea9.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/958.latest.en.0b24d25af4b199f69e10.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/844.latest.en.7fcd45ae446a9a5574e8.js","https://cdn.shopify.com/shopifycloud/checkout-web/assets/OnePage.latest.en.1bd680dc0584d186257d.js"];
+      var styles = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/431.latest.en.18eecd205dabb9c44d0a.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.e5a7f63ca146c0549466.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/958.latest.en.31c500f25402b90e24ba.css","https://cdn.shopify.com/shopifycloud/checkout-web/assets/74.latest.en.3120ae2cf08678c4e2e9.css"];
+      var fontPreconnectUrls = ["https://fonts.shopifycdn.com"];
+      var fontPrefetchUrls = ["https://fonts.shopifycdn.com/lato/lato_n4.c86cddcf8b15d564761aaa71b6201ea326f3648b.woff2?valid_until=MTcwNTEwOTA0OA&hmac=ced27167a8c91af18b6adb1c25072877520b53bc8f54f6088ac5825df6938ea6","https://fonts.shopifycdn.com/lato/lato_n7.f0037142450bd729bdf6ba826f5fdcd80f2787ba.woff2?valid_until=MTcwNTEwOTA0OA&hmac=2e650e6455ec8116b33a9c5ab40aa964b337a796a6fda73c852686281ab77910","https://fonts.shopifycdn.com/raleway/raleway_n4.e721da6683e65ea8e217c48c3a4254b0476a6709.woff2?valid_until=MTcwNTEwOTA0OA&hmac=3d3e7d38604ab4c6e40ea3278898f46e253149e4e0ae4734fe902ae8353ed82d","https://fonts.shopifycdn.com/raleway/raleway_n6.6c405c3e5d61f12e93db56d9d0f418c2881b8452.woff2?valid_until=MTcwNTEwOTA0OA&hmac=a6119c70140ece18b03e74b9b2f798345e76ce3bc233a5c4eb371a823c311f97"];
+      var imgPrefetchUrls = ["https://cdn.shopify.com/s/files/1/2631/5950/files/CFP_LOGO-01_1_x320.png?v=1696721694","https://cdn.shopify.com/s/files/1/2631/5950/files/coffee_beans_PNG9271_2000x.jpg?v=1614289449"];
+
+      function preconnect(url, callback) {
+        var link = document.createElement('link');
+        link.rel = 'dns-prefetch preconnect';
+        link.href = url;
+        link.crossOrigin = '';
+        link.onload = link.onerror = callback;
+        document.head.appendChild(link);
+      }
+
+      function preconnectAssets() {
+        var resources = [baseURL].concat(fontPreconnectUrls);
+        var index = 0;
+        (function next() {
+          var res = resources[index++];
+          if (res) preconnect(res[0], next);
+        })();
+      }
+
+      function prefetch(url, as, callback) {
+        var link = document.createElement('link');
+        if (link.relList.supports('prefetch')) {
+          link.rel = 'prefetch';
+          link.fetchPriority = 'low';
+          link.as = as;
+          if (as === 'font') link.type = 'font/woff2';
+          link.href = url;
+          link.crossOrigin = '';
+          link.onload = link.onerror = callback;
+          document.head.appendChild(link);
+        } else {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', url, true);
+          xhr.onloadend = callback;
+          xhr.send();
+        }
+      }
+
+      function prefetchAssets() {
+        var resources = [].concat(
+          scripts.map(function(url) { return [url, 'script']; }),
+          styles.map(function(url) { return [url, 'style']; }),
+          fontPrefetchUrls.map(function(url) { return [url, 'font']; }),
+          imgPrefetchUrls.map(function(url) { return [url, 'image']; })
+        );
+        var index = 0;
+        (function next() {
+          var res = resources[index++];
+          if (res) prefetch(res[0], res[1], next);
+        })();
+      }
+
+      function onLoaded() {
+        preconnectAssets();
+        prefetchAssets();
+      }
+
+      if (document.readyState === 'complete') {
+        onLoaded();
+      } else {
+        addEventListener('load', onLoaded);
+      }
+    })();
+  
