@@ -29,8 +29,8 @@ namespace HtmlToPdf.Controllers
         public bool Get()
         {
             var appPath = _env.ContentRootPath;
-            var htmlPath = Path.Combine(appPath, "AppData\\HtmlToPdf\\DesignDevelopmentGloutir.html");
-            var pdfPath = Path.Combine(appPath, "AppData\\HtmlToPdf\\DesignDevelopmentGloutir3.pdf");
+            var htmlPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir.html");
+            var pdfPath = Path.Combine(appPath, "AppData\\DesignDevelopmentGloutir3.pdf");
 
             var html = System.IO.File.ReadAllText(htmlPath);
 
