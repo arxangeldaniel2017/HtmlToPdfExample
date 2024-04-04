@@ -37,9 +37,8 @@ namespace HtmlToPdf.Controllers
 
             var html = System.IO.File.ReadAllText(htmlPath);
 
-            // PdfSharp - bad
-            //var pdf = PdfGenerator.GeneratePdf(html, PdfSharpCore.PageSize.A4);
-            //pdf.Save(pdfPath);
+            if(System.IO.File.Exists(pdfPath))
+                System.IO.File.Delete(pdfPath);
 
             // Syncfusion - good but expensive
             HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
@@ -47,21 +46,6 @@ namespace HtmlToPdf.Controllers
             FileStream fileStream = new FileStream(pdfPath, FileMode.CreateNew, FileAccess.ReadWrite);
             document.Save(fileStream);
             document.Close(true);
-
-
-            //var converter = new HiQPdf.HtmlToPdf();
-            //var basePath = "";
-            //converter.ConvertHtmlToFile(html, basePath, pdfPath);
-
-
-            //var htmlProvider = new HtmlFormatProvider();
-            //RadFlowDocument document = htmlProvider.Import(html);
-            //var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-            //using (Stream output = System.IO.File.OpenWrite(pdfPath))
-            //{
-            //    pdfProvider.Export(document, output);
-            //}
-
 
             return true;
         }
